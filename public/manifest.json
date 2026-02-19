@@ -1,0 +1,35 @@
+{
+  "name": "SS Clothes Sumerpur - Order Management",
+  "short_name": "SS Clothes",
+  "description": "SS Clothes Sumerpur - An Address of Elegance. Order management system for creating orders and receiving instant email invoices.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#171717",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "shopping", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "New Order",
+      "short_name": "New Order",
+      "description": "Create a new order",
+      "url": "/?action=new",
+      "icons": [
+        {
+          "src": "/icons/logo.png",
+          "sizes": "any"
+        }
+      ]
+    }
+  ]
+}

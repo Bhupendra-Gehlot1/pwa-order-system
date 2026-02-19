@@ -1,0 +1,205 @@
+/* App Component Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Offline Banner */
+.offline-banner {
+  background: var(--gray-800);
+  color: var(--white);
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.app-header {
+  background: var(--white);
+  color: var(--gray-900);
+  padding: 50px 20px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.logo-container {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 220px;
+  max-height: 140px;
+  height: auto;
+  width: auto;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 2px;
+  color: var(--gray-800);
+  text-transform: uppercase;
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  padding: 40px 20px;
+  background: transparent;
+}
+
+/* Footer */
+.app-footer {
+  background: var(--gray-900);
+  color: var(--gray-400);
+  padding: 50px 20px 30px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: auto;
+  border-top: 1px solid var(--gray-800);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-brand {
+  margin-bottom: 0;
+}
+
+.footer-brand-name {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-address {
+  color: var(--gray-400);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 13px;
+}
+
+.footer-social {
+  margin: 0;
+}
+
+.instagram-link {
+  color: var(--gray-300);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.instagram-link:hover {
+  color: var(--white);
+}
+
+.footer-copyright {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--gray-800);
+  color: var(--gray-500);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-info {
+    text-align: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-header .subtitle {
+    font-size: 1rem;
+  }
+
+  .app-header {
+    padding: 30px 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    max-height: 90px;
+  }
+
+  .app-main {
+    padding: 30px 15px;
+  }
+
+  .offline-banner {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .app-header .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    max-width: 120px;
+    max-height: 70px;
+  }
+
+  .offline-banner span:first-child {
+    display: none; /* Hide emoji on very small screens */
+  }
+}
