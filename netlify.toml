@@ -5,8 +5,8 @@
   # Directory where the build output is located
   publish = "dist"
 
-  # Build command
-  command = "npm run build"
+  # Build command - npm ci ensures clean install from package-lock.json
+  command = "npm ci && npm run build"
 
   # Functions directory
   functions = "netlify/functions"
