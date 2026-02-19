@@ -6,8 +6,8 @@
   publish = "dist"
 
   # Build command - install all dependencies including devDependencies (vite is needed)
-  # Note: Netlify automatically installs function dependencies from netlify/functions/package.json
-  command = "npm install --production=false && npm run build"
+  # Explicitly install function dependencies to ensure they're available
+  command = "npm install --production=false && cd netlify/functions && npm install && cd ../.. && npm run build"
 
   # Functions directory
   functions = "netlify/functions"
